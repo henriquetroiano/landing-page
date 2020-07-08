@@ -21,9 +21,11 @@ clickListener.addEventListener('click', function(event) {
         setTimeout(function() {
             menu.classList.remove('active');
         }, 500)
+    } else {
+        menu.classList.remove('active');
+
     }
 })
 
 
 
-})
