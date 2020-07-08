@@ -1,0 +1,75 @@
+@media (orientation: portrait) {
+  #header > img {
+    height: 20vh;
+    top: -5vh;
+  }
+
+  #header > #nav-bar {
+    width: max-content;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: fixed;
+    right: 0;
+    top: -20vh;
+    height: auto;
+    background-color: rgb(245, 240, 225);
+    padding: 10px;
+  }
+
+  #header > #nav-bar::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10vh;
+    height: 10vh;
+    background: url("../assets/arrow.svg") no-repeat center;
+    background-size: 70%;
+    cursor: pointer;
+    transition: 500ms;
+  }
+
+  #header > #nav-bar.active {
+    top: 10vh;
+  }
+
+  #header > #nav-bar.active::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10vh;
+    height: 10vh;
+    background: url("../assets/arrow.svg") no-repeat center;
+    background-size: 70%;
+    transform: rotate(180deg);
+    cursor: pointer;
+  }
+
+  #header > #nav-bar.active > a {
+    font-size: 20px;
+    padding: 5px;
+    font-weight: 500;
+    align-self: flex-start;
+  }
+
+  #header > #nav-bar.active > a:hover {
+    transform: skewX(-10deg) scale(1.1);
+    color: gray;
+  }
+
+  main,
+  footer {
+    width: 85vw;
+  }
+
+  #video {
+    width: 85vw;
+    margin-top: 100px;
+  }
+
+  #form {
+    width: 100%;
+    margin: 20px auto;
+  }
+}
